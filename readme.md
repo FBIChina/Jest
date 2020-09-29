@@ -1,73 +1,18 @@
-# Init project
-- `npm init`
-- install jest: `yarn add --dev jest`
-- `mkdir src`
-    - create a sum.js file 
-    ```javascript
-        function sum(a, b) {
-            return a + b;
-        }
-        module.exports = sum;
-    ```
-    - create a file named sum.test.js
-    ```javascript
-        const sum = require('./sum');
+# Install puppeteer on Ubuntu
 
-        test('adds 1 + 2 to equal 3', () => {
-        expect(sum(1, 2)).toBe(3);
-        });
-    ```
-
-- Add the following section to your package.json:
-```json
-{
-  "scripts": {
-    "test": "jest"
-  }
-}
-```
-- run yarn test or npm run test and Jest will print this message:
+## Update your system
+sudo apt-get update
+## Install dependencies
 ```shell
-PASS  ./sum.test.js
-✓ adds 1 + 2 to equal 3 (5ms)
+sudo apt install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
 ```
-> you can view all steps above in https://jestjs.io/docs/en/getting-started
+## Install puppeteer
+npm install puppeteer
+> make sure you have install nodejs before
 
 
-# support es6 
-- `yarn add --dev babel-jest @babel/core @babel/preset-env`
+> reference: https://dotlayer.com/how-to-install-and-configure-puppeteer-on-ubuntu-18-04-lts/
 
-- babel.config.js
-```javascript
-// babel.config.js
-module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
-  ],
-};
-```
+# install jest-puppeteer
 
->  reference documentation: https://jestjs.io/docs/en/getting-started#using-babel
-
-# support TypeScript 
-- yarn add --dev @babel/preset-typescript
-- babel.config.js
-```javascript
-// babel.config.js
-module.exports = {
-  presets: [
-    ['@babel/preset-env', {targets: {node: 'current'}}],
-+    '@babel/preset-typescript',
-  ],
-};
-```
-
->  reference documentation: https://jestjs.io/docs/en/getting-started#using-typescript. Maybe you need to install @types/jest
-
+https://jestjs.io/docs/en/puppeteer#use-jest-puppeteer-preset
