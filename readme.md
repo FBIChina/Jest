@@ -15,4 +15,7 @@ npm install puppeteer
 
 # install jest-puppeteer
 
-https://jestjs.io/docs/en/puppeteer#use-jest-puppeteer-preset
+> https://jestjs.io/docs/en/puppeteer#use-jest-puppeteer-preset
+
+## config expect-puppeteer
+> https://github.com/smooth-code/jest-puppeteer/blob/master/packages/expect-puppeteer/README.md#toMatchElement
